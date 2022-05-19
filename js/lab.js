@@ -1,33 +1,22 @@
-// Get the dropdown element by class.
-var dropdown = document.getElementsByClassName("dropdown-btn");
+// Get the button element that toggles the side bar display
+var sidenavDisplayer = $(".sidenavDisplayer");
 
-/*var i; I think this is uneeded because i is created in the loop.
-if this turns out to be a problem someone can revert it.*/
+//get the side bar display element itself
+var sidenav = $(".sidenav");
 
-/* I am pretty sure this doesn't need to be in a loop. the length of dropdown
-   is 1, and that doesn't seem to ever change because dropdown is a button.
-   I took the loop out and it worked just fine, but I reverted it incase it was
-   important. Let me know if it is or not*/
+//get the Topics div that contains multiple elements within the sidebar
+var dropdownbtn = $(".dropdown-btn");
 
-// Adds a click event to the dropdown menu and display whats inside
-for (let i = 0; i < dropdown.length; i++) {
+// get the multiple hidden elements within the sidebar
+var dropdownContainer = $(".dropdown-container");
 
-  // Add a click event to the dropdown element
-  dropdown[i].addEventListener("click", function() {
 
-    // Makes the dropdown button green with white text
-    this.classList.toggle("active");
+// Add a click event to the button that toggles the display of the side nav.
+sidenavDisplayer.click(function(){
+  sidenav.toggle();
+});
 
-    // Get the element blow the button (div class="dropdown-container")
-    var dropdownContent = this.nextElementSibling;
-
-    // Display the hidden elements when the dropdown is clicked.
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    }
-    else {
-      dropdownContent.style.display = "block";
-    }
-
-  });
-}
+// add a click event to the Topics div that toggles the display of some nested elements.
+dropdownbtn.click(function(){
+  dropdownContainer.toggle();
+});
