@@ -4,6 +4,8 @@ body {
 
 .sidenavDisplayer{
   position: fixed;
+  top:30px;
+  left:220px;
 }
 
 .sidenav {
