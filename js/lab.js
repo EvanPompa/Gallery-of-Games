@@ -1,22 +1,43 @@
-// Get the button element that toggles the side bar display
-var sidenavDisplayer = $(".sidenavDisplayer");
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
-//get the side bar display element itself
-var sidenav = $(".sidenav");
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
 
-//get the Topics div that contains multiple elements within the sidebar
-var dropdownbtn = $(".dropdown-btn");
 
-// get the multiple hidden elements within the sidebar
-var dropdownContainer = $(".dropdown-container");
+// SLIDESHOW function
+let slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// Add a click event to the button that toggles the display of the side nav.
-sidenavDisplayer.click(function(){
-  sidenav.toggle();
-});
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// add a click event to the Topics div that toggles the display of some nested elements.
-dropdownbtn.click(function(){
-  dropdownContainer.toggle();
-});
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
