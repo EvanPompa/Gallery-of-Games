@@ -39,7 +39,7 @@ body {
   top: 0;
   left: 0;
   background-color: #111;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-top: 20px;
   display: none;
 }
@@ -102,20 +102,30 @@ body {
 .column {
   float: left;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 400px; /* Should be removed. Only for demonstration */
 }
 
-.left {
-  width: 30%;
 
+.left {
+  width: 25%;
+
+}
+
+.middle{
+  width: 40%;
 }
 
 .right {
-  width: 70%;
-  padding: 70px;
+  width: 35%;
+/* padding: 70px; */
 /*   background-color: #4c4c4d; */
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 /*SLIDE SHOW */
 * {box-sizing: border-box}
