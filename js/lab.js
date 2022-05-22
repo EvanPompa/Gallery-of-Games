@@ -1,43 +1,25 @@
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+//When adding a slideshow, please add another "1" to the slide index. so for ex: "[1,1,{insert 1 here}]"
+let slideIndex = [1,1];
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
+// When adding a slideshow, please add the name of the slides to this list.
+let slideId = ["mario-slides", "sonic-slides"];
+
+//When adding a slideshow, please add another function call and increment the second value ex: showSlides(1, {increment this number});
+showSlides(1, 0);
+showSlides(1, 1);
+
+//this function cycles between slides
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
 }
 
-
-// SLIDESHOW function
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+//this fucntion decides which slide to display given that button you clicked.
+function showSlides(n, no) {
+  let x = $("." + slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (let i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  x[slideIndex[no]-1].style.display = "block";
 }

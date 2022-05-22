@@ -16,6 +16,7 @@
     <!-- Website title -->
     <title>Gallery of Games</title>
   </head>
+
   <body>
 
     <!-- Header -->
@@ -23,82 +24,146 @@
 
     <!-- Main Body -->
     <div id="mainBody">
-        <div class="row">
 
+      <div id="superMarioBros" class="game">
 
-          <!-- LEFT COLUMN -->
-          <div class="column left" style="background-color:#aaa;">
-            <img src="img/MarioLogo.png" style="width:75%">
-
-          </div>
-          <!-- MIDDLE COLUMN -->
-          <div class="column middle" style="background-color:#bbb;">
-            <div id="superMarioBros">
-            <h2> Super Mario Bros</h2>
-              <p>
-              A platform game developed and published by Nintendo.
-              The successor to the 1983 arcade game Mario Bros. and the first in the
-              Super Mario series, it was released in 1985 for the Famicom in Japan.
-              Following a limited US release for the Nintendo Entertainment System (NES),
-              it was ported to international arcades for the Nintendo Vs. System in early 1986.
-              The NES version received a wide release in North America that year and in PAL
-              regions in 1987.
-              </p>
-            </div>
-          </div>
-
-          <!-- RIGHT COLUMN -->
-          <div class="column right" style="background-color:#ccc;">
-
-            <div class="slideshow-container">
-
-              <div class="mySlides fade">
-                <img src="img/SM.png" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/Mario3.png" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/Mario64.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SMB.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SMG.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SM3D.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SMO.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SMM.png"  style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="img/SMR.png"  style="width:100%">
-              </div>
-
-
-
-              <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)">❯</a>
-
-            </div>
-          </div>
-
+        <div id="marioIcon" class="left">
+          <img src="img/Mario/MarioLogo.png" style="width:75%">
         </div>
+
+        <div id="marioText" class="middle">
+          <h1>Super Mario Brothers</h1>
+          <h3>
+            A platform game developed and published by Nintendo.
+            The successor to the 1983 arcade game Mario Bros. and the first in the
+            Super Mario series, it was released in 1985 for the Famicom in Japan.
+            Following a limited US release for the Nintendo Entertainment System (NES),
+            it was ported to international arcades for the Nintendo Vs. System in early 1986.
+            The NES version received a wide release in North America that year and in PAL
+            regions in 1987.
+          </h3>
+        </div>
+
+        <div id="marioSlideShow" class="right">
+          <div class="slideshow-container" style="width: 100%">
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SM.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/Mario3.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/Mario64.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SMB.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SMG.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SM3D.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SM.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SMO.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SMM.png">
+            </div>
+
+            <div class="mario-slides fade">
+              <img src="img/Mario/SMR.png">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+          </div>
+        </div>
+        <br style="clear: both">
       </div>
 
+      <div id="sonicTheHedgehog" class="game">
+
+        <div id="sonicIcon" class="left">
+          <img src="img/Sonic/Sonic-Logo.png" style="width:75%">
+        </div>
+
+        <div id="sonicText" class="middle">
+          <h1>Sonic The Hedgehog</h1>
+          <h3>
+            Sonic the Hedgehog is a platform video game developed by Sonic
+            Team and published by Sega for the Sega Genesis home video game
+            console. The first game in the Sonic the Hedgehog franchise, it was
+            released in North America in June 1991 and in PAL regions and Japan
+            the following month. The game features Sonic the Hedgehog, who can
+            run at supersonic speeds, setting out on a quest to defeat
+            Dr. Robotnik, a scientist who has imprisoned animals in robots and
+            seeks the powerful Chaos Emeralds. Sonic was originally created to
+            overthrow Nintendo's monopoly on the video game market in the early
+            1990's. The plan worked and forced compitition between the two
+            companies, which allowed some amazing games to be created. Once true
+            3D games started being created (1996), Sega abandoned the 2d sonic
+            formula for twelve years in their mainline games. These 3d games are
+            loved by many but serve as a point of criticism as to whether sonic
+            is better in 2d or 3d.
+          </h3>
+        </div>
+
+        <div id="sonicSlideShow" class="right">
+          <div class="slideshow-container" style="width: 100%">
+
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic1.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic2.webp">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic3.webp">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic adventure.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonicadventure2.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic unleashed.webp">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic colors.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonicgenerations.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/soniclostworld.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonicmania.jpg">
+            </div>
+            <div class="sonic-slides fade">
+              <img src="img/Sonic/sonic forces.webp">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+          </div>
+        </div>
+        <br style="clear: both">
+      </div>
 
   </body>
 </html>
