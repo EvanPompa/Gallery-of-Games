@@ -18,7 +18,7 @@ function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
 }
 
-//this fucntion decides which slide to display given that button you clicked.
+//this function decides which slide to display given that button you clicked.
 function showSlides(n, no) {
   let x = $("." + slideId[no]);
   if (n > x.length) {slideIndex[no] = 1}
@@ -29,47 +29,49 @@ function showSlides(n, no) {
   x[slideIndex[no]-1].style.display = "block";
 }
 
-//FILTER
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("game");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+//The filter function chooses what games to display given their genre.
+function filterSelection(category) {
+
+  // Get all video games
+  var games = $(".game");
+
+  // If the user wants to display all games...
+  if(category == "all"){
+
+    // Loop through all games and display them.
+    games.each(function(){
+      displayElement($(this));
+    });
+  }
+  else{ // If the user wants to sort by a specific game...
+
+    // Loop through all games...
+    games.each(function(){
+
+      // If the selected element is in the genre the user wants...
+      if($(this).hasClass(category)){
+
+        // display this game on the page.
+        displayElement($(this));
+      }
+      else{// If the selected element is NOT in the genre the user wants...
+
+        // remove this game from the page.
+        removeElement($(this));
+      }
+    });
   }
 }
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
+//This function sets the display of any element to "block" which will make it appear on the page.
+function displayElement(element){
+  element.show();
 }
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
+//This function sets the display of any element to "none" which will make it NOT appear on the page.
+function removeElement(element){
+  element.hide();
 }
 
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+//When the website starts, display all games.
+filterSelection("all");
