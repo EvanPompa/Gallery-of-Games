@@ -22,11 +22,11 @@
 
     <!-- Nav -->
     <div class="sidenav">
-
-     <a href="#Shooters">Shooters</a>
-     <a href="#Platformers">Platformers</a>
-     <a href="#Adventure">Adventure</a>
-     <a href="#Horror">Horror</a>
+      <a><button class="btn active" onclick="filterSelection('all')"> Show all</button></a>
+      <a><button class="btn" onclick="filterSelection('Shooters')"> Shooters</button></a>
+      <a><button class="btn" onclick="filterSelection('Platformer')"> Platformer</button></a>
+      <a><button class="btn" onclick="filterSelection('Adventure')"> Adventure</button></a>
+      <a><button class="btn" onclick="filterSelection('Horror')"> Horror</button></a>
 
 
      <button class="dropdown-btn">Topics
@@ -53,7 +53,17 @@
     <!-- Main Body -->
     <div id="mainBody">
 
-      <div id="superMarioBros" class="game">
+<!--
+          <div class="row">
+      <div class="column Platformer">
+        <div class="content">
+          <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+          <h4>Mountains</h4>
+          <p>Lorem ipsum dolor..</p>
+        </div>
+      </div> -->
+      <div class="Platformer">
+      <div id="superMarioBros" class="game Platformer">
 
         <div id="marioIcon" class="left">
           <img src="img/Mario/MarioLogo.png" style="width:75%">
@@ -121,8 +131,9 @@
         </div>
         <br style="clear: both">
       </div>
+    </div>
 
-      <div id="sonicTheHedgehog" class="game">
+      <div id="sonicTheHedgehog" class="game Platformer">
 
         <div id="sonicIcon" class="left">
           <img src="img/Sonic/Sonic-Logo.png" style="width:75%">
@@ -193,7 +204,7 @@
         <br style="clear: both">
       </div>
 
-      <div id = "Pokemon" class = "game">
+      <div id = "Pokemon" class = "game Adventure">
 
         <div id = "PokemonLogo" class = "left">
           <img src="img/Pokemon/PokemonLogo.png" style="width:75%">
