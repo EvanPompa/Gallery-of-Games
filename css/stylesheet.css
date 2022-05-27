@@ -142,6 +142,7 @@ img{
 
 hr.solid {
   border-top: 3px solid #bbb;
+  /* position:relative; right:200px; top:2px; */
 }
 
 
