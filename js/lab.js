@@ -1,8 +1,8 @@
 //When adding a slideshow, please add another "1" to the slide index. so for ex: "[1,1,{insert 1 here}]"
-let slideIndex = [1,1,1,1,1,1];
+let slideIndex = [1,1,1,1,1,1,1,1];
 
 // When adding a slideshow, please add the name of the slides to this list.
-let slideId = ["mario-slides", "sonic-slides", "pokemon-slides", "tetris-slides", "kirby-slides", "doom-slides"];
+let slideId = ["mario-slides", "sonic-slides", "pokemon-slides", "tetris-slides", "kirby-slides", "doom-slides", "hk-slides", "journey-slides"];
 
 //When adding a slideshow, please add another function call and increment the second value ex: showSlides(1, {increment this number});
 showSlides(1, 0);
@@ -11,6 +11,8 @@ showSlides(1, 2);
 showSlides(1, 3);
 showSlides(1, 4);
 showSlides(1, 5);
+showSlides(1, 6);
+showSlides(1, 7);
 
 
 //this function cycles between slides
