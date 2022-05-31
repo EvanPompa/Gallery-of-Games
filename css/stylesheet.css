@@ -12,7 +12,7 @@ img{
   font-size: 100px;
   text-align: center;
   background-color: #111;
-  color: beige;
+  color: #dedede;
   margin-top: 0px;
   padding-top: 0px;
   font-weight: 700;
@@ -20,7 +20,7 @@ img{
 
 #mainBody{
   background-color: #111;
-  color: #f5dbdb;
+  color: #dbdbdb;
   margin: 40px;
   height: auto;
 }
@@ -153,6 +153,8 @@ hr.solid {
   z-index: 1;
   top: 0;
   left: 0;
+  border-left: 6px solid #8fe9ff;
+  border-right: 2px solid white;
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
