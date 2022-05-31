@@ -1,8 +1,8 @@
 //When adding a slideshow, please add another "1" to the slide index. so for ex: "[1,1,{insert 1 here}]"
-let slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1,1];
+let slideIndex = [1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
 // When adding a slideshow, please add the name of the slides to this list.
-let slideId = ["mario-slides", "sonic-slides", "pokemon-slides", "tetris-slides", "kirby-slides", "doom-slides", "hk-slides", "journey-slides", "among_us-slides", "counterStrike-slides", "zelda-slides", "dark-souls-slides", "terraria-slides"];
+let slideId = ["mario-slides", "sonic-slides", "pokemon-slides", "tetris-slides", "kirby-slides", "doom-slides", "hk-slides", "journey-slides", "among_us-slides", "counterStrike-slides", "zelda-slides", "dark-souls-slides", "terraria-slides", "tf2-slides"];
 
 //When adding a slideshow, please add another function call and increment the second value ex: showSlides(1, {increment this number});
 showSlides(1, 0);
@@ -18,6 +18,7 @@ showSlides(1, 9);
 showSlides(1, 10);
 showSlides(1, 11);
 showSlides(1, 12);
+showSlides(1, 13);
 
 
 
