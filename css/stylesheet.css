@@ -37,13 +37,18 @@ img{
   margin-bottom: 50px;
   display: none;
 }
-.game div{
-  float: left;
-  width: 33.3333%;
-}
 
+.left{
+  float: left;
+  width: 20%;
+}
+.middle{
+  float: left;
+  width: 50%;
+}
 .right{
   float: right;
+  width: 28%;
 }
 /*SLIDE SHOW */
 .marioSlides, .marioSlides2 {display: none}
