@@ -19,8 +19,8 @@ img{
 }
 
 #mainBody{
-  background-color: #111;
-  color: #dbdbdb;
+  background-color: #white;
+  color: white;
   margin: 40px;
   height: auto;
 }
@@ -45,6 +45,9 @@ img{
 .middle{
   float: left;
   width: 50%;
+  background-color: black;
+  padding: 10px;
+  opacity: 80%;
 }
 .right{
   float: right;
@@ -216,7 +219,10 @@ hr.solid {
 .content {
   background-color: white;
   padding: 10px;
+
 }
+
+
 
 /* The "show" class is added to the filtered elements */
 .show {
@@ -239,4 +245,26 @@ hr.solid {
 .btn.active {
   background-color: #666;
   color: white;
+}
+
+/* backgrounds */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.5;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url("../img/Mario/bg.jpg");
+  min-height: 100%;
+}
+
+
+.bgimg-2 {
+  background-image: url("../img/Sonic/bg.png");
+  min-height: 100%;
 }
