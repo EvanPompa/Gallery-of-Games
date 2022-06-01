@@ -1,242 +1,62 @@
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #111;
-  box-sizing: border-box;
-}
-
-img{
-  vertical-align: middle;
+html{
+  background-color: #08183A;
+  color: beige;
 }
 
 #header{
+  background-color: #152852;
   font-size: 100px;
   text-align: center;
-  background-color: #111;
   color: #dedede;
   margin-top: 0px;
   padding-top: 0px;
   font-weight: 700;
 }
-
-#mainBody{
-  background-color: #111;
-  color: #dbdbdb;
-  margin: 40px;
-  height: auto;
-}
-#mainBody div{
-  /* border-style: dashed; */
-  border-width: 10px;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-}
-
-/*Align all of the Divs inside of the Row for any Game*/
-.game{
-  margin-bottom: 50px;
-  display: none;
-}
-
-.left{
-  float: left;
-  width: 20%;
-}
-.middle{
-  float: left;
-  width: 50%;
-}
-.right{
-  float: right;
-  width: 28%;
-}
-/*SLIDE SHOW */
-.marioSlides, .marioSlides2 {display: none}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-  float: none;
-}
-.slideshow-container div{
+#main{
+  background-color: #152852;
   width: 100%;
 }
-.slideshow-container div img{
-  width: 100%;
-}
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev{
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+#loadbutton{
   text-align: center;
+  left: 50%;
 }
 
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+#Nav{
+  width: 100%;
+  background-color: black;
+  height: 50px;
+  position: sticky;
+  top: 0;
+}
+#Genres{
+    text-align: center;
+    width: 25%;
+    background-color: black;
+    height: 50px;
+    font-size: 20px;
+}
+#Genres div{
+  width: 100%;
+  display: none;
+  height: 50px;
+  background-color: black;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.bodydiv{
+  width: 50%;
+  float: left;
+  font-size: 50px;
 }
-
-/* Fading animation */
-.fade {
+.bodydiv img{
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  animation-name: fade;
-  animation-duration: 2s;
+  width: 50%;
 }
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.bodydiv p{
+  font-size: 30%;
 }
-
-
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
 hr.solid {
   border-top: 3px solid #bbb;
   /* position:relative; right:200px; top:2px; */
-}
-
-
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  border-left: 6px solid #8fe9ff;
-  border-right: 2px solid white;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-/* Filter */
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display: block;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
 }
