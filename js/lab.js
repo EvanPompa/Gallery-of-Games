@@ -191,3 +191,23 @@ $("#educational").click(function(){
 $("#card").click(function(){
   filter($("#card").attr('id'));
 });
+
+
+// SEARCH BAR
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = $("#myInput").val();
+    filter = input.toUpperCase();
+    ul = $("#myUL");
+    li = $("#li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].$("#a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
