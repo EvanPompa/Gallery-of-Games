@@ -1,16 +1,42 @@
 html{
-  background-color: #08183A;
-  color: beige;
+  background-color: #222630;
+  color: #dedede;
 }
 
+.button {
+  border: black;
+  border-style: outset;
+  color: white;
+  padding: 16px 16px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 24px 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color:   #FFFFFF;
+  color: black;
+  border: 2px solid #CBCBCB;
+}
+
+.button1 {
+  background-color:   #FFFFFF;
+  color: black;
+  border: 2px solid #CBCBCB;
+}
+
+
 #header{
-  background-color: #152852;
+  background-color: #222630;
   font-size: 100px;
   text-align: center;
   color: #dedede;
   margin-top: 0px;
   padding-top: 0px;
   font-weight: 700;
+  font-family: "Lato", sans-serif;
 }
 #main{
   background-color: #152852;
@@ -19,6 +45,10 @@ html{
 #loadbutton{
   text-align: center;
   left: 50%;
+}
+
+div{
+  font-family: "Lato", sans-serif;
 }
 
 #Nav{
@@ -57,6 +87,7 @@ html{
   width: 50%;
   float: left;
   font-size: 50px;
+  font-family: "Lato", sans-serif;
 }
 .bodydiv img{
   display: block;
