@@ -1,11 +1,10 @@
 @font-face {
     font-family: "8-bit Arcade In";
-    src: url("fonts/")
+    src: url("fonts/8-bit_arcade_inwebfont.woff");
 }
 
 html{
-  background-color: #222630;
-  color: #dedede;
+  background-image: url('../img/spacebg.jpg');
 }
 
 .button {
@@ -32,9 +31,11 @@ html{
   border: 2px solid #CBCBCB;
 }
 
+#main {
+  color:white;
+}
 
 #header{
-  background-color: #222630;
   font-size: 100px;
   text-align: center;
   color: #dedede;
@@ -48,8 +49,14 @@ html{
   width: 100%;
 }
 #loadbutton{
+  background-color: #e79c21;
+  font-family: "8-bit Arcade In";
+  color: #9c4a00;
   text-align: center;
-  left: 50%;
+  font-size:50px;
+  border-style: solid;
+  border-color: #9c4a00;
+  border-width: 8px;
 }
 
 div{
@@ -62,25 +69,39 @@ div{
   height: 50px;
   position: sticky;
   top: 0;
+  border-style: double;
+  border-color: blue;
+  border-width: 4px;
 }
 #Genres{
+    font-family: "8-bit Arcade In";
     text-align: center;
     width: 25%;
     background-color: black;
     height: 50px;
-    font-size: 20px;
+    font-size: 50px;
 }
 #Genres div{
+  font-family: "8-bit Arcade In";
   width: 100%;
   display: none;
   height: 50px;
+  font-size: 40px;
   background-color: black;
+}
+
+#role-playing-games-rpg {
+  font-size: 20px;
+}
+
+#massively-multiplayer {
+  font-size: 20px;
 }
 
 #myInput {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 3px;
+  right: 3px;
   width: 50%; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
