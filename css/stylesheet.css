@@ -31,10 +31,6 @@ html{
   border: 2px solid #CBCBCB;
 }
 
-#main {
-  color:white;
-}
-
 #header{
   font-size: 100px;
   text-align: center;
@@ -45,7 +41,8 @@ html{
   font-family: "Lato", sans-serif;
 }
 #main{
-  background-color: #152852;
+  opacity: 100%
+  background-color: black;
   width: 100%;
 }
 #loadbutton{
@@ -114,7 +111,8 @@ div{
   width: 50%;
   float: left;
   font-size: 50px;
-  font-family: "Lato", sans-serif;
+  font-family: "8-bit Arcade In";
+  color:white;
 }
 .bodydiv img{
   display: block;
@@ -123,6 +121,7 @@ div{
   width: 50%;
 }
 .bodydiv p{
+  font-family: "Courier New";
   font-size: 30%;
 }
 hr.solid {
