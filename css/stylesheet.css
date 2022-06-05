@@ -80,6 +80,7 @@ div{
     background-color: black;
     height: 50px;
     font-size: 50px;
+    color: white;
 }
 #Genres div{
   font-family: "8-bit Arcade In";
@@ -87,6 +88,7 @@ div{
   display: none;
   height: 50px;
   font-size: 40px;
+  text-align: center;
   background-color: black;
 }
 
@@ -107,6 +109,24 @@ div{
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 8px; /* Add some space below the input */
+}
+#results{
+  position: absolute;
+  top: 50px;
+  right: 3px;
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  margin-bottom: 8px; /* Add some space below the input */
+  height: auto;
+}
+#results div{
+  position: relative;
+  width: 100%; /* Full-width */
+  height: 50px;
+  font-size: 16px; /* Increase font-size */
+  height: auto;
+  background-color: white;
 }
 
 .bodydiv{
