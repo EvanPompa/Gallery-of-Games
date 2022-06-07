@@ -34,7 +34,7 @@ function getAjax(){
       // Inside of THIS new div, place the name of the game.
       // after closing this div, create a new div to put the image in.
       // Finally close the current div and the parent div.
-      mainEL.append("<div class='"+genres+"' id='"+data.results[i].slug+"'><div class='bodydiv' id='"+data.results[i].id+"'>"+data.results[i].name+"<div></div></div><div class='bodydiv'>"+"<img src='"+data.results[i].background_image+"'></div><br style='clear: both'></div>");
+      mainEL.append("<div class='"+genres+"' id='"+data.results[i].slug+"'><div class='bodydiv' id='"+data.results[i].id+"'><h2 class='gameName'>"+data.results[i].name+"</h2><div></div></div><div class='bodydiv'>"+"<img src='"+data.results[i].background_image+"'></div><br style='clear: both'></div>");
 
       // get the ID of the currently selected game
       let identifier = data.results[i].id;
@@ -42,6 +42,12 @@ function getAjax(){
       // add a click function to the currently selected game based of off ID number
       $("#"+identifier).click(function(){
         applyDescription(identifier);
+      });
+      //Styling with hover for better user experience
+      $(".gameName").hover(function(){
+        $(this).css("color", "yellow");
+      }, function(){
+        $(this).css("color", "white");
       });
     }
     //update the next variable so we can add more games at the click of a button (foreshadowing)
@@ -102,13 +108,20 @@ function gameSearch(inquiry){
       let genres = getGameGenres(i, data);
 
       // append the names of the game to dropdown search bar divs.
-      resultsEL.append("<div id='"+data.results[i].id+"TEMP'>"+data.results[i].name+"</div>");
+      resultsEL.append("<div class='searchResult' id='"+data.results[i].id+"TEMP'>"+data.results[i].name+"</div>");
 
       // get the id,name,and background image of the game.
       let identifier = data.results[i].id;
       let gameName = data.results[i].name;
       let picture = data.results[i].background_image;
       let slug = data.results[i].slug;
+
+      //Styling with hover for better user experience
+      $(".searchResult").hover(function(){
+        $(this).css("color", "blue");
+      }, function(){
+        $(this).css("color", "black");
+      });
 
       // When the user selects a game.....
       $("#"+identifier+"TEMP").click(function(){
@@ -124,12 +137,18 @@ function gameSearch(inquiry){
         //If the game is not on the site, display the game.
         if(gameIndicator == false){
           // add the selected game to the website.
-          mainEL.prepend("<div class='"+genres+"' id='"+slug+"'><div class='bodydiv' id='"+identifier+"'>"+gameName+"<div></div></div><div class='bodydiv'>"+"<img src='"+picture+"'></div><br style='clear: both'></div>");
+          mainEL.prepend("<div class='"+genres+"' id='"+slug+"'><div class='bodydiv' id='"+identifier+"'><h2 class='gameName'>"+gameName+"</h2><div></div></div><div class='bodydiv'>"+"<img src='"+picture+"'></div><br style='clear: both'></div>");
 
           //if the user clicks the selected game on the website...
           $("#"+identifier).click(function(){
             // apply the desription to the div.
             applyDescription(identifier);
+          });
+          //Styling with hover for better user experience
+          $(".gameName").hover(function(){
+            $(this).css("color", "yellow");
+          }, function(){
+            $(this).css("color", "white");
           });
         }
 
@@ -271,3 +290,10 @@ $("#myInput").keypress(function(key){
 
 // Call the function so games are displayed on the website!
 getAjax();
+
+//Styling with hover for better user experience
+$(".menuObject").hover(function(){
+  $(this).css("color", "yellow");
+}, function(){
+  $(this).css("color", "white");
+});

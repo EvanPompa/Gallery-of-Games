@@ -1,6 +1,6 @@
 @font-face {
     font-family: "8-bit Arcade In";
-    src: url("fonts/8-bit_arcade_inwebfont.woff");
+    src: url("../fonts/8-bit_arcade_in-webfont.woff");
 }
 
 html{
@@ -38,7 +38,7 @@ html{
   margin-top: 0px;
   padding-top: 0px;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
+  font-family: "8-bit Arcade In";
 }
 #main{
   opacity: 100%
@@ -57,7 +57,11 @@ html{
 }
 
 div{
-  font-family: "Lato", sans-serif;
+  font-family: "8-bit Arcade In";
+}
+
+h2 {
+  font-size: 50px;
 }
 
 #Nav{
@@ -71,20 +75,20 @@ div{
   border-width: 4px;
 }
 #Genres{
-    font-family: "8-bit Arcade In";
-    text-align: center;
-    width: 25%;
-    background-color: black;
-    height: 50px;
-    font-size: 50px;
-    color: white;
+  font-family: "8-bit Arcade In";
+  text-align: center;
+  width: 25%;
+  background-color: black;
+  height: 50px;
+  font-size: 50px;
+  color: white;
 }
 #Genres div{
   font-family: "8-bit Arcade In";
   width: 100%;
   display: none;
-  height: 50px;
-  font-size: 40px;
+  height: 32px;
+  font-size: 25px;
   text-align: center;
   background-color: black;
 }
@@ -124,6 +128,7 @@ div{
   font-size: 16px; /* Increase font-size */
   height: auto;
   background-color: white;
+  font-family: "Arial", sans-serif;
 }
 
 .bodydiv{
